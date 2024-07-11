@@ -1,21 +1,35 @@
-function checkSpeed() {
-  const speedInput = document.getElementById("speed").value;
-  const resultElement = document.getElementById("result");
-  const speed = Number(speedInput);
+function getStudentGrade() {
+  let marks;
+  while (true) {
+    // Prompt the user to enter the marks
+    marks = prompt("Enter the student's marks (0-100):");
 
-  if (isNaN(speed) || speed < 0) {
-    resultElement.textContent = "Please enter a valid speed.";
-    return;
-  }
+    // Convert the input to a number
+    marks = Number(marks);
 
-  if (speed <= 70) {
-    resultElement.textContent = "Ok";
-  } else {
-    const demeritPoints = Math.floor((speed - 70) / 5);
-    if (demeritPoints > 12) {
-      resultElement.textContent = "License suspended!";
+    // Check if the marks are a valid number and within the valid range
+    if (!isNaN(marks) && marks >= 0 && marks <= 100) {
+      break;
     } else {
-      resultElement.textContent = `Points: ${demeritPoints}`;
+      alert("Please enter a valid number between 0 and 100.");
     }
   }
+
+  let grade;
+  if (marks > 79) {
+    grade = "A";
+  } else if (marks >= 60) {
+    grade = "B";
+  } else if (marks >= 50) {
+    grade = "C";
+  } else if (marks >= 40) {
+    grade = "D";
+  } else {
+    grade = "E";
+  }
+
+  // Output the grade
+  alert(`The grade for marks ${marks} is: ${grade}`);
 }
+
+getStudentGrade();
