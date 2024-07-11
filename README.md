@@ -1,15 +1,11 @@
 # Code-Challenge1
 
 Toy Problems
-Validates the input speed of a car.
-Feedback;
-If the speed is less than or equal to 70 km/h, it displays "Ok".
-For every 5 km/h above the speed limit (70 km/h), it assigns one demerit point.
-If the demerit points exceed 12, it displays "License suspended".
-
-Open the speed.html file in your web browser.
-Enter the car's speed which is a number in km/hr in the input field provided.
-Click Ok to check
-
-index.html for web
-index.js for logic of speed validation
+Student Grade Generator;
+How it works;
+-Ensures the user enters a valid number between 0 and 100 for the student's marks.
+-Determines the grade based on predefined criteria
+-Displays the calculated grade in an alert box for easy viewing
+How to use;
+Once the page is refreshed, enter the student's marks, 0-100 in the prompt window.
+Click ok to view resultsn
