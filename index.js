@@ -7,7 +7,7 @@ function getStudentGrade() {
     // Convert the input to a number
     marks = Number(marks);
 
-    // Check if the marks are a valid number and within the valid range
+    // if loop to check if the marks are a valid number and within the valid range
     if (!isNaN(marks) && marks >= 0 && marks <= 100) {
       break;
     } else {
@@ -29,7 +29,7 @@ function getStudentGrade() {
   }
 
   // Output the grade
-  alert(`The grade for marks ${marks} is: ${grade}`);
+  alert(`The grade for ${marks} marks is: ${grade}`);
 }
-
+// calling the function
 getStudentGrade();
